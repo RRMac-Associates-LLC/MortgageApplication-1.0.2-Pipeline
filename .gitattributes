@@ -1,0 +1,38 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.c text
+*.h text
+*.groovy text
+*.properties text
+*.sh text
+*.txt text
+*.cbl text
+*.cpy text
+*.lnk text
+*.bms text
+*.mfs text
+
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+
+
+#Below is needed of ZOS, if on windows it will cause fatal errors when trying to add back into git, so remove them, but do not check this file back in to git
+*.cpy working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.cbl working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.bms working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.pli working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.mfs working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.bnd working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.lnk working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.rex working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.txt working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.groovy working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.sh working-tree-encoding=ibm-1047 git-encoding=utf-8
+*.properties working-tree-encoding=ibm-1047 git-encoding=utf-8
