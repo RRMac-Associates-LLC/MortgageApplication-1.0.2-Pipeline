@@ -5,7 +5,7 @@ import com.ibm.dbb.build.html.*
 import com.ibm.dbb.repository.*
 import com.ibm.dbb.dependency.*
 import groovy.transform.Field
-
+//test change bp-20181212
 def parseArgs(String[] cliArgs, String usage) {
 	def cli = new CliBuilder(usage: usage)
 	cli.s(longOpt:'sourceDir', args:1, argName:'dir', 'Absolute path to source directory') 
