@@ -1,4 +1,4 @@
-       ID DIVISION.
+       *ID DIVISION.
        PROGRAM-ID. EPSMLIST.
       *    THIS DEMONSTRATES CICS/DEBUG           - EPSDEMOS 2008
       *
@@ -17,9 +17,9 @@
       *
            01  W-FLAGS.
            10  W-SEND-FLAG                    PIC X.
-      88  SEND-ERASE                   VALUE '1'.
-      88  SEND-DATAONLY                VALUE '2'.
-      88  SEND-MAPONLY                 VALUE '3'.
+               88  SEND-ERASE                   VALUE '1'.
+               88  SEND-DATAONLY                VALUE '2'.
+               88  SEND-MAPONLY                 VALUE '3'.
                88  SEND-DATAONLY-ALARM          VALUE '4'.
 
        01 W-CONVERSIONS.
