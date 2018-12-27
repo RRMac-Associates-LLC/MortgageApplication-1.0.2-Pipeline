@@ -15,7 +15,7 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
       *
-           01  W-FLAGS.
+       01  W-FLAGS.
            10  W-SEND-FLAG                    PIC X.
                88  SEND-ERASE                   VALUE '1'.
                88  SEND-DATAONLY                VALUE '2'.
