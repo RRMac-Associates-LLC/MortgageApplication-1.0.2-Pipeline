@@ -1,4 +1,4 @@
-       ID DIVISION.
+       *ID DIVISION.
        PROGRAM-ID. EPSMLIST.
       *    THIS DEMONSTRATES CICS/DEBUG           - EPSDEMOS 2008
       *
