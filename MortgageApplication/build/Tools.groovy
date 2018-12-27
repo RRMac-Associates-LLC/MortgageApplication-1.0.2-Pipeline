@@ -1,10 +1,13 @@
 @groovy.transform.BaseScript com.ibm.dbb.groovy.ScriptLoader baseScript
+
 import com.ibm.dbb.build.*
 import com.ibm.dbb.build.report.*
 import com.ibm.dbb.build.html.*
 import com.ibm.dbb.repository.*
 import com.ibm.dbb.dependency.*
 import groovy.transform.Field
+
+//test change bp-20181213
 
 def parseArgs(String[] cliArgs, String usage) {
 	def cli = new CliBuilder(usage: usage)

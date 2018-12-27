@@ -21,7 +21,6 @@
                88  SEND-DATAONLY                VALUE '2'.
                88  SEND-MAPONLY                 VALUE '3'.
                88  SEND-DATAONLY-ALARM          VALUE '4'.
-
        01 W-CONVERSIONS.
            05  W-PMT-CNVRT     PIC X(12).
            05  W-PMT-NUMBER
@@ -32,7 +31,6 @@
            05  W-PRINC-NUMBER
                REDEFINES W-PRINC-CNVRT
                                PIC 9(10)V99.
-
        01 W-CALL-PROGRAM                      PIC X(8).
        01 RESPONSE                            PIC S9(8) COMP.
        01 INTERNAL-PROGRAM-VARIABLES.
@@ -45,15 +43,12 @@
       *
        01 W-RETIREMENT-WA                     PIC 9(4).
        01 W-COMAREA-LENGTH                    PIC 9(4) COMP.
-
        01 SAVE-COMM-AREA.
           COPY EPSMTCOM.
-
        01  END-OF-TRANS-MSG                 PIC X(30)
              VALUE 'END OF TRANSACTION - THANK YOU'.
            COPY DFHAID.
       *    COPY DFHEIBLK.
-
            COPY EPSMLIS.
        01  OUTMAP REDEFINES EPSMLISI.
            03 FILLER PIC X(110).
@@ -70,25 +65,16 @@
               05 OUTMAP-YEARS              PIC X(2).
            03 FILLER                       PIC X(5).
            03 OUTMAP-MSG                   PIC X(40).
-
            COPY EPSNBRPM.
-
            COPY EPSMORTF.
-
        01  W-COMMUNICATION-AREA.
            COPY EPSMTCOM.
-
        LINKAGE SECTION.
-
        01 DFHCOMMAREA.
        COPY EPSMTCOM.
-
        PROCEDURE DIVISION USING DFHCOMMAREA.
-
       * JPH - DO I need this for files
       * EXEC CICS HANDLE CONDITION H900-NOT-FOUND
-
-
        EPSCMORT-MAINLINE.
            MOVE LENGTH OF DFHCOMMAREA to W-COMAREA-LENGTH.
            MOVE DFHCOMMAREA           TO SAVE-COMM-AREA.
@@ -116,20 +102,15 @@
            .
            MOVE SAVE-COMM-AREA TO DFHCOMMAREA.
            EXEC CICS RETURN END-EXEC.
-
        A100-PROCESS-MAP.
-
            PERFORM A310-ERASE-MAP.
-
            MOVE 0      TO RID-LENGTH.
            MOVE 'N'    TO CLOSE-FILE.
            MOVE 'N'    TO END-OF-FILE.
-
            EXEC CICS STARTBR DATASET('EPSMORTF')
                      RIDFLD(RID-LENGTH) RBA
                      EQUAL
                      RESP(RESPONSE) END-EXEC.
-
            IF (RESPONSE = DFHRESP(NORMAL))
               MOVE 'Y' TO CLOSE-FILE
               MOVE 1   TO DISP-COUNT
@@ -141,17 +122,12 @@
               MOVE RESPONSE                   TO EPLOAN1O
            END-IF
            .
-
-
            IF CLOSE-FILE = 'Y'
             EXEC CICS ENDBR FILE('EPSMORTF') END-EXEC
            END-IF
            .
-
            PERFORM A300-SEND-MAP.
-
        A150-PROCESS-FILE.
-
            EXEC CICS READNEXT FILE('EPSMORTF')
                     INTO(MORTGAGE-COMPANY-INFO)
                     RIDFLD(RID-LENGTH)
@@ -188,14 +164,12 @@
               END-IF
            END-IF
            .
-
        A300-SEND-MAP.
                    EXEC CICS
                      SEND MAP ('EPSMLIS')
                          MAPSET('EPSMLIS')
                          FROM(EPSMLISO)
                    END-EXEC.
-
        A310-ERASE-MAP.
             MOVE LOW-VALUES TO EPSMLISO.
             EXEC CICS
@@ -204,8 +178,6 @@
                      FROM(EPSMLISO)
                      ERASE
             END-EXEC.
-
-
        A600-CALCULATE-MORTGAGE.
            MOVE SAVE-COMM-AREA   TO DFHCOMMAREA.
            MOVE 'Y' TO EPSPCOM-YEAR-MONTH-IND
