@@ -24,6 +24,7 @@
 
 
 #Below is needed of ZOS, if on windows it will cause fatal errors when trying to add back into git, so remove them, but do not check this file back in to git
+#If running in normal DBB setup, uncomment below lines.  If running in pipeline with encoding set on directories, make sure these are commented
 #*.cpy working-tree-encoding=ibm-1047 git-encoding=utf-8
 #*.cbl working-tree-encoding=ibm-1047 git-encoding=utf-8
 #*.bms working-tree-encoding=ibm-1047 git-encoding=utf-8
