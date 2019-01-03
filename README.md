@@ -74,3 +74,4 @@ This now provides the following built-in methods that the script can now invoke:
 
 **Note** that the `File script` argument in the above methods supports both absolute and relative paths.  If the script parameter contains a relative path, then it is automatically appended to the current script's parent directory.  This means that `loadScript(new File("Tools.groovy"))` will try to load the Tools.groovy script file in the same directory that the current running script is in.
  
+ #############################################################################################################
