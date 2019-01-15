@@ -4,7 +4,7 @@ pipeline
 	{
         node 
 		{
-            label 'BillsPipelineTest'
+            label 'DBB102'
             //customWorkspace "/u/jenkins/workspace/temp/billsTest1"
         }
     }
