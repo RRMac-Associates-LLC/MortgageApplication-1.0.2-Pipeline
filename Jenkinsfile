@@ -11,7 +11,7 @@ pipeline
     environment 
 	{
         CI = 'true'
-		WS = '/u/CMN/jenkins/pipelines/BillsTest1'
+		WS = '/u/CMN/jenkins/multibranch/pipeline1'
     }
     stages 
 	{
