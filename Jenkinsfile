@@ -12,6 +12,7 @@ pipeline
     {
         //CI = 'true'
 	//WS = '/u/CMN/jenkins/pipelines/MultiBranchPipeline2'
+	CC = 'clang'
     }
     stages 
 	{
