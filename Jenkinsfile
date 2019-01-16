@@ -10,8 +10,8 @@ pipeline
     }
     environment 
 	{
-        CI = 'true'
-		WS = '/u/CMN/jenkins/multibranch/pipeline1'
+        //CI = 'true'
+	//WS = '/u/CMN/jenkins/'
     }
     stages 
 	{
@@ -27,7 +27,7 @@ pipeline
             steps 
 		{
                 echo 'build.............................................................................................'   
-		sh encoding: 'IBM1047', script: 'env'
+		//sh encoding: 'IBM1047', script: 'env'
 		sh '/bin/sh /u/jenkins/workspace/temp/runGroovyz.sh'
             }
         }
