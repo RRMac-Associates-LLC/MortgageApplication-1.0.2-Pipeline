@@ -1,17 +1,17 @@
 pipeline 
 {
     agent 
-	{
+    {
         node 
-		{
+	{
             label 'DBB102'
             //customWorkspace "/u/jenkins/workspace/temp/billsTest1"
         }
     }
     environment 
-	{
+    {
         //CI = 'true'
-	//WS = '/u/CMN/jenkins/'
+	WS = '/u/CMN/jenkins/pipelines/MultiBranchPipeline2'
     }
     stages 
 	{
