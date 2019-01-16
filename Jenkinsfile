@@ -25,9 +25,10 @@ pipeline
         stage('Build') 
 		{
             steps 
-			{
-                echo 'build.............................................................................................'        				
-				sh '/bin/sh /u/jenkins/workspace/temp/runGroovyz.sh'
+		{
+                echo 'build.............................................................................................'   
+		sh encoding: 'IBM1047', script: 'env'
+		sh '/bin/sh /u/jenkins/workspace/temp/runGroovyz.sh'
             }
         }
         stage('Test') 
