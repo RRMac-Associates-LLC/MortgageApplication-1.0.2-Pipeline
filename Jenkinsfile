@@ -5,13 +5,13 @@ pipeline
 		node 
 		{
 			label 'DBB102'
-			customWorkspace "/u/CMN/jenkins/pipelines/MultiBranchPipeline2"
+			customWorkspace "/u/CMN/jenkins/pipelines/BillsTest1/MultiBranchPipeline2"
 		}
 	}
 	environment 
 	{
 		//CI = 'true'
-		WS = '/u/CMN/jenkins/pipelines/MultiBranchPipeline2'
+		WS = '/u/CMN/jenkins/pipelines/BillsTest1/MultiBranchPipeline2'
 		CC = 'clang'
 	}
 	stages 
