@@ -29,7 +29,9 @@ pipeline
 			{
 				ws("${env.WS}")
 				{
-					withEnv(["DIR=${env.WS}/MortgageApplication",
+					withEnv(["DIR=${env.WS}/MortgageApplication-1.0.2/MortgageApplication/build/build.groovy",
+				            	'JAVA_HOME=/usr/lpp/java/J8.0_64',
+				            	'IBM_JAVA_ENABLE_ASCII_FILETAG=ON',
 							'CMNSYS=P',
 							'WAIT_FOR_JOB=180',
 							'ENV=PROD',
@@ -41,9 +43,9 @@ pipeline
 					{
 						echo 'build.............................................................................................'   
 						//sh encoding: 'IBM1047', script: 'env'
-						sh '/bin/sh /u/jenkins/scripts/convertToIBM1047.sh'						
+						//sh '/bin/sh /u/jenkins/scripts/convertToIBM1047.sh'						
 						sh '/bin/sh /u/jenkins/workspace/temp/runGroovyz.sh'
-						sh '/bin/sh /u/jenkins/scripts/convertToISO8859.sh'
+						//sh '/bin/sh /u/jenkins/scripts/convertToISO8859.sh'
 					}
 				}
 			}
