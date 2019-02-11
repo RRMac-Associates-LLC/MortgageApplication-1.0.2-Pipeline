@@ -24,8 +24,8 @@ pipeline
 			{
 				checkout scm 	
 				
-				def commitHash = checkout(scm).GIT_COMMIT
-				echo "commitHash="+commitHash
+				//def commitHash = checkout(scm).GIT_COMMIT
+				//echo "commitHash="+commitHash
 			}
 		}
 		stage('Build') 
