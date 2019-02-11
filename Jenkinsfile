@@ -22,7 +22,10 @@ pipeline
 		{ // for display purposes
 			steps 
 			{
-				checkout scm 		
+				checkout scm 	
+				
+				def commitHash = checkout(scm).GIT_COMMIT
+				echo "commitHash="+commitHash
 			}
 		}
 		stage('Build') 
