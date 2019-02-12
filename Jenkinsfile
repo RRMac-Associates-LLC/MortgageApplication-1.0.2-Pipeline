@@ -23,7 +23,7 @@ pipeline
 			steps 
 			{
 				//checkout scm 	
-				
+				echo "CheckoutMaster"
 				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'master'])
 						    
 				//def commitHash = checkout(scm).GIT_COMMIT
