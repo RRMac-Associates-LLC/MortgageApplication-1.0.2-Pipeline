@@ -24,7 +24,7 @@ pipeline
 			{
 				//checkout scm 	
 				
-				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'master']
+				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'master'])
 						    
 				//def commitHash = checkout(scm).GIT_COMMIT
 				//echo "commitHash="+commitHash
@@ -63,7 +63,7 @@ pipeline
 			{
 				//checkout scm 	
 				
-				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'test']
+				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'test'])
 						    
 				//def commitHash = checkout(scm).GIT_COMMIT
 				//echo "commitHash="+commitHash
