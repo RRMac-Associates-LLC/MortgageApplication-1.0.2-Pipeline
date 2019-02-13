@@ -24,6 +24,10 @@ pipeline
 			{
 				//checkout scm 	
 				echo "CheckoutMaster"
+				
+				//just testing
+				input message: 'Finished using the web site? (Click "Proceed" to continue)'
+				
 				checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'), targets: [BRANCH_NAME,'master'])
 						    
 				//def commitHash = checkout(scm).GIT_COMMIT
