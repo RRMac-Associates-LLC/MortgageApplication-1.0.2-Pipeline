@@ -34,7 +34,7 @@ pipeline
 				//echo "commitHash="+commitHash
 			}
 		}
-		stage('master') 
+		stage('build') 
 		{
 			steps 
 			{
