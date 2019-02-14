@@ -18,7 +18,7 @@ pipeline
 	}
 	stages 
 	{
-		stage('CheckoutMaster') 
+		stage('master') 
 		{ // for display purposes
 			steps 
 			{
@@ -34,7 +34,7 @@ pipeline
 				//echo "commitHash="+commitHash
 			}
 		}
-		stage('BuildMaster') 
+		stage('master') 
 		{
 			steps 
 			{
@@ -61,7 +61,7 @@ pipeline
 				}
 			}
 		}		
-		stage('Test') 
+		stage('Something') 
 		{
 			steps 
 			{
