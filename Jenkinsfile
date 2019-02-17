@@ -32,7 +32,7 @@ pipeline
 				//checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'rmac30NewKeyFoundIn_id_rsa', url: 'git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git']]])
 				
 				//just testing
-				input message: 'Finished using the web site? (Click "Proceed" to continue)'
+				//input message: 'Finished using the web site? (Click "Proceed" to continue)'
 				
 				//checkout resolveScm(source: git('git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline2.git'), targets: [BRANCH_NAME,'master'])
 					    
