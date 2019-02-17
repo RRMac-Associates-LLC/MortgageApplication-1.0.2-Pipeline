@@ -46,7 +46,7 @@ pipeline
 			{
 				ws("${env.WS}")
 				{
-					withEnv(["DIR=${env.WS}/MortgageApplication-1.0.2/MortgageApplication/build/build.groovy",
+					withEnv(["DIR=${env.WS}/MortgageApplication/build/build.groovy",
 				            	'JAVA_HOME=/usr/lpp/java/J8.0_64',
 				            	'IBM_JAVA_ENABLE_ASCII_FILETAG=ON',
 							'CMNSYS=P',
