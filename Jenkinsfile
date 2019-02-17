@@ -13,7 +13,7 @@ pipeline
 	{
 		//CI = 'true'
 		//WS = '/u/CMN/jenkins/pipelines/BillsTest1/MultiBranchPipeline2'
-		WS = '/u/jenkins/workspace/GIT_Project/MultiBranchPipeline2'
+		WS = '/u/jenkins/workspace/GIT_Project/MultiBranchPipeLine1-2'
 		CC = 'clang'
 	}
 	stages 
@@ -24,6 +24,12 @@ pipeline
 			{
 				//checkout scm 	
 				echo "CheckoutMaster"
+				
+				
+				//generated 
+				//git credentialsId: 'rmac30NewKeyFoundIn_id_rsa', url: 'git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'
+				
+				//checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'rmac30NewKeyFoundIn_id_rsa', url: 'git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git']]])
 				
 				//just testing
 				input message: 'Finished using the web site? (Click "Proceed" to continue)'
