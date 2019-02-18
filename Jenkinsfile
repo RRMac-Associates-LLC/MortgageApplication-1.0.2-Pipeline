@@ -24,7 +24,7 @@ pipeline
 			{
 				//checkout scm 	
 				echo "CheckoutMaster"
-				
+				//Checkout is done with jenkin git plugin...
 				
 				//generated 
 				//git credentialsId: 'rmac30NewKeyFoundIn_id_rsa', url: 'git@github.com:RRMac-Associates-LLC/MortgageApplication-1.0.2-Pipeline.git'
