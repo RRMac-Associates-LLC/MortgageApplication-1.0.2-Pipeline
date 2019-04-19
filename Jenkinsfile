@@ -7,7 +7,7 @@ pipeline
 			label 'DBB102'
 			//customWorkspace "/u/CMN/jenkins/pipelines/BillsTest1/MultiBranchPipeline2"
 			customWorkspace "/u/jenkins/workspace/GIT_Project/MultiBranchPipeLine1-2"
-			def DynamicBuild = load "/u/jenkins/scripts/DynamicBuild.groovy"
+			//def DynamicBuild = load "/u/jenkins/scripts/DynamicBuild.groovy"
 		}
 	}
 	environment 
