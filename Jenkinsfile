@@ -4,7 +4,8 @@ pipeline
 	{
 		node 
 		{
-			label 'DBB102'
+			//label 'DBB102'
+			label 'BillsPipelineTest'
 			//customWorkspace "/u/CMN/jenkins/pipelines/BillsTest1/MultiBranchPipeline2"
 			customWorkspace "/u/jenkins/workspace/GIT_Project/MultiBranchPipeLine1-2"
 			//def DynamicBuild = load "/u/jenkins/scripts/DynamicBuild.groovy"
